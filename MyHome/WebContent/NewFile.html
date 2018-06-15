@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+
+    <title>Magnific Popup: Responsive jQuery Lightbox Plugin</title>
+    
+    <meta charset="utf-8"> 
+    <meta name="description" content="Light and open source responsive lightbox plugin with focus on performance, for jQuery and Zepto.js. High-DPI (retina) display support, fast tap for touch devices.">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta name="author" content="Dmitry Semenov">
+    <link rel="canonical" href="http://dimsemenov.com/plugins/magnific-popup/">
+
+    <meta property="og:url" content="http://dimsemenov.com/plugins/magnific-popup/">
+    <meta property="og:title" content="Magnific Popup: Responsive jQuery Lightbox Plugin">
+    <meta property="og:description" content="Light and open source responsive lightbox plugin with focus on performance, for jQuery and Zepto.js. High-DPI (retina) display support, fast tap for touch devices.">
+    <meta property="og:image" content="http://dimsemenov.com/magnific-og-400x400.jpg">
+
+    <link href="https://plus.google.com/102586375605352607718" rel="publisher">
+
+    
+      <link href="site-assets/all.min.css?v=1.1.0" rel="stylesheet">
+    
+
+
+    
+
+  </head>
+<body>
+<div class="example gc3">
+    <h3>Lightbox gallery</h3>
+    <p>You may put any HTML content in each gallery item and <a href="http://codepen.io/dimsemenov/pen/vKrqs">mix content types</a>. In this example lazy-loading of images is enabled for the next image based on move direction. If you wish to add touch-swipe support, check <a href="https://www.smashingmagazine.com/2013/05/truly-responsive-lightbox/">my article</a> on the Smashing Magazine, or <a href="http://photoswipe.com">new PhotoSwipe</a> script.</p>
+    <div class="html-code grid-of-images">
+      <div class="popup-gallery">
+	<a href="img/1.jpg" title="The Cleaner"><img src="img/1.jpg" width="75" height="75"></a>
+	<a href="img/2.jpg" title="Winter Dance"><img src="img/2.jpg" width="75" height="75"></a>
+	<a href="img/3.jpg" title="The Uninvited Guest"><img src="img/3.jpg" width="75" height="75"></a>
+</div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.popup-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          tLoading: 'Loading image #%curr%...',
+          mainClass: 'mfp-img-mobile',
+          gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+          },
+          image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+              return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+            }
+          }
+        });
+      });
+    </script>
+  </div>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-25969065-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    function recordOutboundLink(link, category, action) {
+      _gat._getTrackerByName()._trackEvent(category, action);
+      setTimeout('document.location = "' + link.href + '"', 100);
+    }
+</script>
+<script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter11382601 = new Ya.Metrika({id:11382601, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script>
+<noscript><div><img src="//mc.yandex.ru/watch/11382601" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<div id="mfp-build-tool" class="mfp-hide">
+  <h2>Magnific Popup v1.1.0 Build Tool</h2>
+  <form id="mfp-build-form">
+    <p class="help-block">Here you can generate optimized version of main JS file. Please note that CSS you should download directly: <a target="_blank" href="https://raw.github.com/dimsemenov/Magnific-Popup/master/src/css/main.scss">Sass version</a> or <a target="_blank" href="https://raw.github.com/dimsemenov/Magnific-Popup/master/dist/magnific-popup.css">CSS version</a>.</p>
+     <label class="checkbox">
+      <input type="checkbox" name="inline" checked=""> Inline
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="image" checked=""> Image
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="ajax" checked=""> Ajax
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="iframe" checked=""> Iframe
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="gallery" checked=""> Gallery
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="retina" checked=""> High-DPI (retina) support for image type
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="imagezoom" checked=""> Image zoom animation
+    </label>
+  </form> 
+     
+  <br>
+  <div>
+    <button id="mfp-build-button">Generate build</button>  
+  	<label class="checkbox">
+      <input id="mfp-minify" type="checkbox" name="minify" checked="checked"> Minify code
+    </label> 
+  </div>
+  <br>
+  <p id="mfp-build-status" style="display:none"></p>
+  <br>
+  <textarea id="mfp-build-tool-out" style="width: 100%; height: 300px; display:none;"></textarea>
+</div>
+<script type="text/javascript">
+	$(document).ready(function($) {
+		
+		$('.mfp-build-tool-link').magnificPopup({closeBtnInside:true, type:'inline', midClick: true});
+
+		var h = window.location.hash;
+		if(h.indexOf('build=') > -1) {
+			var formInputs = $('#mfp-build-form input');
+			
+		    if(h.indexOf('&') > 0) {
+		       h = h.substr(0, h.indexOf('&'));
+		    }
+		    var items = h.substr(h.indexOf('build=') + 6, h.length).split('+');
+		    for(var i = 0; i < items.length; i++) {
+		      var name = items[i];
+		      if(name) {
+		        formInputs.filter('[name="' +name+ '"]').addClass('present');
+		      }
+		    }
+	    	formInputs.not('.present').prop('checked', false);
+    	}
+
+
+	    var button = $('#mfp-build-button').click(function(e) {
+	    	e.preventDefault();
+
+	    	button.attr('disabled', 'disabled');
+
+	    	var statusTimeout;
+	    	var setStatus = function(msg, type) {
+	    		clearTimeout(statusTimeout);
+	    		$('#mfp-build-status').html('<span class="'+type+'">'+msg+'</span>').show();
+	    	};
+	    	setStatus('Wait a moment please...', 'progress');
+	    	$('#mfp-build-tool-out').val( '' );
+
+	    	
+
+	    	var minify = $('#mfp-minify')[0].checked;
+	    	var removeModule = function(source, key) {
+			        source = source.replace(new RegExp("\\/\\*>>"+key+"\\*\\/[\\s|\\S]*?\\/\\*>>"+key+"\\*\\/", "ig"), "");
+			        return source;
+			    };
+
+
+
+
+
+			var onError = function() {
+				setStatus("Error: Build tool wasn't able to GET the js file. Please try again or make file by yourself using Grunt.", 'error');
+			};
+
+			var version = '1.1.0';
+			var loadedScripts = [];
+		    var onScriptsLoaded = function() {
+
+		    	
+			    var src = loadedScripts[0];
+
+			    var hash = '',
+		            name;
+
+		        $('#mfp-build-form input').each(function() {
+		          name = $(this).attr('name');
+
+		          if( this.checked ) {
+		            hash += name + '+';
+		          } else {
+		            src = removeModule(src, name);
+		          }
+
+		        });
+
+		        var output = '';
+
+		        if(hash) {
+		        	hash = hash.substr(0, hash.length-1);
+		        }
+		        
+		        if(minify) {
+					src = uglify(src, ["--extra","--unsafe"]);
+					output = '// Magnific Popup v'+version+' by Dmitry Semenov' + "\n";
+		        	output += '// http://bit.ly/magnific-popup' + (hash ? '#build=' + hash : '') + "\n" + src;
+		        } else {
+		        	output = src;
+		        }
+		        
+		        if(!hash) {
+		        	hash = 'core';
+		        } else {
+		       		hash = 'core+' + hash;
+		        }
+
+		        $('#mfp-build-tool-out').val( output ).show();
+
+		        button.removeAttr('disabled');
+
+		        setStatus('Magnific Popup main js file successfully generated! You can copy generated code from textarea below.' + (hash ? (' Your build includes: <strong>' + hash.split('+').join(', ')) + '</strong>. ' : ''), 'success');
+		    };
+
+
+		    $.ajax({
+			 	url:"dist/jquery.magnific-popup.js?v="+version, 
+			 	dataType: 'text',
+			 	success: function( data) {
+			 		loadedScripts[0] = data;
+			 		if(loadedScripts[1]) {
+			 			onScriptsLoaded();
+			 		}
+			 	},
+			 	error: onError
+			});
+
+			$.ajax({
+			 	url:"third-party-libs/uglify.js", 
+			 	dataType: 'script',
+			 	cache: true,
+			 	success: function(data) {
+			 		loadedScripts[1] = data;
+			 		if(loadedScripts[0]) {
+			 			onScriptsLoaded();
+			 		}
+			 	},
+			 	error: onError
+			});
+
+		});
+		/* build tool END */
+
+
+
+
+
+
+		/**
+		 * Popup with source code for each example
+		 */
+		var example,
+		      getCode,
+		      CSS,
+		      JS,
+		      HTML,
+		      highlighterLoaded;
+
+		  var formatCode = function (str) {
+		      if(str) {
+		        // replace special chars
+		        str = str.replace(/[&<>"']/g, function($0) {
+		            return "&" + {"&":"amp", "<":"lt", ">":"gt", '"':"quot", "'":"#39"}[$0] + ";";
+		        });
+		        
+		        // remove spaces from each line based on spaces on first line
+		        var firstLineLength = str.match(/^(\s*)/)[1].length;
+		        var regExp = new RegExp('^ {' + (firstLineLength-1) + '}', "gm");
+		        str = str.replace(regExp, '');
+
+		        // replace spaces with tabs
+		        str = str.replace(/  /g,'\t');
+
+		        str = $.trim(str);
+		      }
+		      return str;
+		    };
+
+		  var highlight = function() {
+		    hljs.highlightBlock(JS.find('code')[0]);
+
+		    if(CSS)
+		      hljs.highlightBlock(CSS.find('code')[0]);
+
+		    if(HTML)
+		      hljs.highlightBlock(HTML.find('code')[0]);
+		  };
+
+		$('.example').each(function() {
+		    $(this).find('h3').click(function() {
+				var example = $(this).parent('.example');
+				var getCodeWindow = $('<div class="get-code-window"><h1>'+example.find('h3').text()+'</h1></div>');
+				JS = $('<div class="highlight"><pre><code class="javascript">'+formatCode(example.find('script').eq(0).html())+'</code></pre></div>');
+
+				CSS = example.find('style');
+				if(CSS.length) {
+					CSS = $('<div class="highlight"><pre><code class="css">'+formatCode(CSS.html())+'</code></pre></div>');
+				} else {
+					CSS = '';
+				}
+
+				HTML = example.find('.html-code');
+				if(HTML.length) {
+					HTML = $('<div class="highlight"><pre><code class="xml html">'+formatCode(HTML.html())+'</code></pre></div>');
+				} else {
+					HTML = '';
+				}
+
+				if(!highlighterLoaded) {
+					highlighterLoaded = true;
+					var script = document.createElement("script"),
+						$script = $(script);
+						script.src = 'http://yandex.st/highlightjs/7.3/highlight.min.js';
+					if(window.jQuery) {
+						$.getScript(script.src , function() {
+							highlight();
+						});
+					} else {
+						$(script).appendTo("head").on("load", function() {
+							highlight();
+						});
+					}
+				} else {
+					highlight();
+				}
+
+				getCodeWindow.append(JS);
+				getCodeWindow.append(HTML);
+				getCodeWindow.append(CSS);
+
+				getCodeWindow.append('<p>Code above is dynamically generated directly from the source of this example.<br/>Please read <a href="documentation.html">the documentation</a> before using it.</p>');
+
+				$.magnificPopup.open({
+					items: {
+						src: getCodeWindow,
+						type: 'inline'
+					}
+				});
+
+		});
+
+	});
+});
+</script>
+
+</body>
+
+</html>
