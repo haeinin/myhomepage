@@ -1,5 +1,6 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 body {
-  font-family: 'Open Sans', serif;
+  font-family: 'Noto Sans KR', serif;
   padding-top: 54px;
   color: #868e96;
 }
@@ -146,6 +147,6 @@ a:hover, a:focus, a:active {
   color: #F1B70A;
 }
 
-.kor{
-	font-family:Nanum Gothic Coding;
-	}
+.NG{
+	font-family : Nanum Gothic Coding;
+}
